@@ -3,7 +3,6 @@
 Compile the files in cmd (Windows):
 
 ## Affine Cipher
---------------------------
 Description:
 Consider the Affine Cipher on the alphabet Z26 = {A, B, . . . , Z} where A = 0, B = 1, . . . , Z = 25,
 and the encryption function with key (a, b): C = aM + b (mod 26)
@@ -20,12 +19,11 @@ Instructions:
 
 
 ## LDES
---------------------------
 Description: LDES is a mini example of a block cipher that has 2 rounds in the Feistel structure
 It operates on 4-bit block and 2-bit key. The important feature of LDES is that the S-box has been replaced with a linear operation, which makes the whole cipher linear.
 For each key = 00, 01, 10, 11, encrypt the following binary messages = 0000, 1000, 0100, 0010, 0001, 1100, 1010, 1001, 0110, 0101, 0011, 0111, 1011, 1101, 1110, 1111
 
-![LDES-SBox](github.com/engkhsky/Cryptography-Algorithms/blob/master/Images/LDES_SBox.jpg)
+![LDES-SBox](https://raw.githubusercontent.com/engkhsky/Cryptography-Algorithms/master/Images/LDES_SBox.jpg)
 
 Instruction:
 1. Compile file: javac LDES.java
@@ -41,7 +39,6 @@ Instruction:
    java LDES -mode decrypt -key 11 -ct 1100
 
 ## MDES
---------------------------
 Description: MDES is a mini example of a block cipher that has 2 rounds in the Feistel structure similar to LDES except that the operation from (I1,I2,I3) to (J1,J2) is based on the S-box diagram
 
 | I1I2I3  | 000 | 001 | 010 | 011 | 100 | 101 | 110 | 111 |
