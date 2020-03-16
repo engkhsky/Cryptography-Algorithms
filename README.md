@@ -1,9 +1,8 @@
-Readme instructions:
-====================
+# Instructions:
 
 Compile the files in cmd (Windows):
 
-Affine Cipher
+## Affine Cipher
 --------------------------
 Description:
 Consider the Affine Cipher on the alphabet Z26 = {A, B, . . . , Z} where A = 0, B = 1, . . . , Z = 25,
