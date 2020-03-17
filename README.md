@@ -3,11 +3,11 @@
 Compile the files in cmd (Windows):
 
 ## Affine Cipher
-Description:
+**Description:**
 Consider the Affine Cipher on the alphabet Z26 = {A, B, . . . , Z} where A = 0, B = 1, . . . , Z = 25,
 and the encryption function with key (a, b): C = aM + b (mod 26)
 
-Instructions:
+**Instructions:**
 1. Compile file: javac AffineCipher.java
 
 2. Run program with the following parameters:
@@ -19,13 +19,14 @@ Instructions:
 
 
 ## LDES
-Description: LDES is a mini example of a block cipher that has 2 rounds in the Feistel structure
+**Description:**
+LDES is a mini example of a block cipher that has 2 rounds in the Feistel structure
 It operates on 4-bit block and 2-bit key. The important feature of LDES is that the S-box has been replaced with a linear operation, which makes the whole cipher linear.
 For each key = 00, 01, 10, 11, encrypt the following binary messages = 0000, 1000, 0100, 0010, 0001, 1100, 1010, 1001, 0110, 0101, 0011, 0111, 1011, 1101, 1110, 1111
 
 <p align="center"><img src="/Images/LDES_SBox.jpg" width="400"></p>
 
-Instruction:
+**Instruction:**
 1. Compile file: javac LDES.java
 
 2. Run program with the following parameters for different modes:
@@ -39,17 +40,33 @@ Instruction:
    java LDES -mode decrypt -key 11 -ct 1100
 
 ## MDES
-Description: MDES is a mini example of a block cipher that has 2 rounds in the Feistel structure similar to LDES except that the operation from (I1,I2,I3) to (J1,J2) is based on the S-box diagram
+**Description:**
+MDES is a mini example of a block cipher that has 2 rounds in the Feistel structure similar to LDES except that the operation from (I1,I2,I3) to (J1,J2) is based on the S-box diagram
 
-| I1I2I3  | 000 | 001 | 010 | 011 | 100 | 101 | 110 | 111 |
-| ------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| J1J2 | 00 | 00 | 00 | 01 | 00 | 00 | 10 | 11 |
-
+<table>
+      <tr><td>I1I2I3</td><td>000</td><td>001</td><td>010</td><td>011</td><td>100</td><td>101</td><td>110</td><td>111</td></tr>
+      <tr><td>J1J2</td><td>00</td><td>00</td><td>00</td><td>01</td><td>00</td><td>00</td><td>10</td><td>11</td></tr>
+</table>
 
 For each key = 00, 01, 10, 11, encrypt the following binary messages = 0000, 1000, 0100, 0010, 0001, 1100, 1010, 1001, 0110, 0101, 0011, 0111, 1011, 1101, 1110, 1111
 
+**Instruction:**
+1. Compile file: javac MDES.java
+2. Run program with the following parameters for different modes:
+   - All keys and binary messages: java MDES -mode all
+   - Different keys and binary messages:
+     pt - plaintext
+     ct - ciphertext
 
-Instruction:
+   For example:
+   java MDES -mode encrypt -key 11 -pt 1101
+   java MDES -mode decrypt -key 11 -ct 1100
+
+## MDES (ECB & CBC Modes)
+**Description: **
+This MDES implemented in two modes: ECB and CBC. Both modes ECB and CBC do
+not need message padding and accept a key as 2-bit binary string, a message as hex
+string and outputs a ciphertext as a hex string as parameters.
 
 
 Q4. Compile file first
