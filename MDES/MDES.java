@@ -1,9 +1,8 @@
 /*
- * CSCI361 Assignment 1
+ * MDES
  * --------------------------
- * File name: Q4Part4.java
  * Author: Eng Kia Hui
- * Student Number: 5986187 (UOW)
+ *
  */
 
 
@@ -11,7 +10,7 @@
 
 import java.util.ArrayList;
 
-public class Q4Part4 {
+public class MDES {
 
 	private static String aBit = "";
 	private static String bBit = "";
